@@ -1,57 +1,43 @@
-// Pega tu enlace CSV de Google Sheets dentro de las comillas:
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQWM1GELO6-3yw4zP2JkODo5YpDYrnDVKtRDu-sJwfAX875Dr4Soix33Hl055ceU0BTnQQNvFYLohFB/pub?gid=0&single=true&output=csv"; 
+// Reemplaza con tu número de WhatsApp real (código de país + número, ej: 51999999999)
+const WHATSAPP_NUMBER = "51999999999";
 
-// Tu número de WhatsApp con código de país (Ejemplo Perú: 51999999999)
-const MI_WHATSAPP = "51999999999"; 
-
-async function cargarProductos() {
-  try {
-    const respuesta = await fetch(SHEET_URL);
-    const textoCSV = await respuesta.text();
-    
-    // Separar las filas de la tabla
-    const filas = textoCSV.split('\n').slice(1);
-    const contenedor = document.getElementById('productos-container');
-    
-    contenedor.innerHTML = ""; // Limpiar el texto de "Cargando..."
-
-    filas.forEach(fila => {
-      // Separar cada dato de la fila por comas
-      const columnas = fila.split(',');
-      
-      if (columnas.length >= 5) {
-        const id = columnas[0]?.trim();
-        const nombre = columnas[1]?.trim();
-        const precio = columnas[2]?.trim();
-        const descripcion = columnas[3]?.trim();
-        const imagen = columnas[4]?.trim();
-
-        if (nombre) {
-          contenedor.innerHTML += `
-            <div class="card">
-              <img src="${imagen}" alt="${nombre}" onerror="this.src='https://via.placeholder.com/200?text=Sin+Imagen'">
-              <h3>${nombre}</h3>
-              <p>${descripcion}</p>
-              <div class="precio">$${precio}</div>
-              <button class="btn-whatsapp" onclick="comprarPorWhatsApp('${nombre}', '${precio}')">
-                Pedir por WhatsApp
-              </button>
-            </div>
-          `;
-        }
-      }
-    });
-  } catch (error) {
-    console.error("Error al cargar productos:", error);
-    document.getElementById('productos-container').innerHTML = "<p>Error al cargar el catálogo.</p>";
+// Si usas Google Sheets, aquí harías el fetch. Por ahora dejamos el array de ejemplo corregido:
+const products = [
+  {
+    id: 1,
+    title: "Camiseta Negra 100% Algodón",
+    description: "Camiseta de corte clásico en algodón peinado de alta calidad. Cómoda, fresca y duradera.",
+    price: "$25",
+    // Imagen de alta calidad que encaje bien
+    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop"
   }
+];
+
+function renderProducts() {
+  const container = document.getElementById("products-grid");
+  if (!container) return;
+
+  container.innerHTML = products.map(product => {
+    // Mensaje automático para el chat de WhatsApp
+    const message = encodeURIComponent(`¡Hola SUYAI! Me interesa comprar el producto: *${product.title}* (${product.price}).`);
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
+    return `
+      <article class="product-card">
+        <div class="product-image-container">
+          <img src="${product.image}" alt="${product.title}" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">${product.title}</h3>
+          <p class="product-description">${product.description}</p>
+          <div class="product-price">${product.price}</div>
+          <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <span>Pedir por WhatsApp</span>
+          </a>
+        </div>
+      </article>
+    `;
+  }).join("");
 }
 
-function comprarPorWhatsApp(nombreProducto, precio) {
-  const mensaje = `Hola! Vengo de tu tienda web y me interesa comprar: *${nombreProducto}* por un precio de *$${precio}*`;
-  const url = `https://wa.me/${MI_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, '_blank');
-}
-
-// Ejecutar la función al cargar la página
-cargarProductos();
+document.addEventListener("DOMContentLoaded", renderProducts);
