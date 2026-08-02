@@ -1,66 +1,181 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f9;
+:root {
+  --primary-color: #0f172a;
+  --accent-color: #25d366; /* Verde WhatsApp */
+  --accent-hover: #1ebd59;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #333;
 }
 
-header {
-  background-color: #0f172a;
-  color: white;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 2.5rem 1rem;
   text-align: center;
-  padding: 2rem 1rem;
 }
 
-main {
-  max-width: 1000px;
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+/* Banner superior */
+.announcement-bar {
+  background-color: #1e293b;
+  color: #fbbf24;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Main Layout */
+.main-container {
+  max-width: 1100px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
 }
 
-.card {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
+/* Grilla de productos */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta de producto */
+.product-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.card img {
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Corrección de la imagen (Evita recortes extraños) */
+.product-image-container {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 320px;
+  background-color: #f1f5f9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.precio {
-  font-size: 1.25rem;
-  font-weight: bold;
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cambiar a 'contain' si la foto tiene fondo blanco completo */
+  object-position: center;
+}
+
+/* Contenido de la tarjeta */
+.product-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.product-description {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.product-price {
+  font-size: 1.35rem;
+  font-weight: 800;
   color: #0284c7;
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
 }
 
+/* Botón de WhatsApp */
 .btn-whatsapp {
-  background-color: #25d366;
-  color: white;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
   padding: 0.75rem 1rem;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  width: 100%;
 }
 
 .btn-whatsapp:hover {
-  background-color: #1eb854;
+  background-color: var(--accent-hover);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: #94a3b8;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
 }
