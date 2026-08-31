@@ -4,49 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ========================================== -->
-  <!-- 1. TÍTULO Y META DESCRIPCIONES SEO         -->
-  <!-- ========================================== -->
-  <title>SUYAI.store | Tienda Online Oficial en Perú - Envíos a Todo el País</title>
-  <meta name="description" content="Descubre ofertas exclusivas en moda, calzado, tecnología y belleza en SUYAI.store. Compra de forma segura con envíos rápidos a todo el Perú por WhatsApp.">
-  <meta name="keywords" content="tienda online peru, comprar zapatillas lima, ofertas ropa peru, suyai store, compras whatsapp">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://tu-dominio.com/">
+  <!-- ==========================================
+       SEO PRINCIPAL
+       ========================================== -->
+  <title>SUYAI.store | Tienda Online en Perú</title>
 
-  <!-- Meta etiquetas para Redes Sociales (Open Graph & Twitter) -->
+  <meta
+    name="description"
+    content="SUYAI.store es una tienda online en Perú. Encuentra zapatillas, calzado, polos, moda, tecnología y productos de belleza con envíos a todo el Perú."
+  >
+
+  <meta
+    name="keywords"
+    content="SUYAI.store, Suyai Store, tienda online Perú, zapatillas Perú, zapatillas Lima, comprar zapatillas, polos Perú, calzado Perú, moda Perú"
+  >
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow, max-image-preview:large">
+
+  <!-- URL REAL DE TU TIENDA -->
+  <link rel="canonical" href="https://www.suyai.store/">
+
+  <!-- ==========================================
+       OPEN GRAPH
+       ========================================== -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SUYAI.store | Tu Tienda Virtual en Perú">
-  <meta property="og:description" content="Moda, tecnología y calzado al mejor precio. Envíos garantizados a todo el Perú.">
-  <meta property="og:image" content="https://tu-dominio.com/banner-og.jpg">
-  <meta property="og:url" content="https://tu-dominio.com/">
+  <meta property="og:site_name" content="SUYAI.store">
+  <meta property="og:title" content="SUYAI.store | Tienda Online en Perú">
+  <meta
+    property="og:description"
+    content="Zapatillas, calzado, polos, moda, tecnología y belleza en SUYAI.store."
+  >
+  <meta property="og:url" content="https://www.suyai.store/">
+  <meta property="og:locale" content="es_PE">
 
-  <!-- FontAwesome & PapaParse -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <!--
+    Si tienes una imagen para redes sociales, puedes ponerla aquí:
+    https://www.suyai.store/banner-og.jpg
+  -->
+  <meta property="og:image" content="https://www.suyai.store/banner-og.jpg">
 
-  <!-- ========================================== -->
-  <!-- 2. DATOS ESTRUCTURADOS (SCHEMA.ORG GENERAL)-->
-  <!-- ========================================== -->
+  <!-- ==========================================
+       TWITTER
+       ========================================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SUYAI.store | Tienda Online en Perú">
+  <meta
+    name="twitter:description"
+    content="Zapatillas, calzado, polos, moda, tecnología y belleza."
+  >
+  <meta name="twitter:image" content="https://www.suyai.store/banner-og.jpg">
+
+  <!-- ==========================================
+       FAVICON
+       ========================================== -->
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- ==========================================
+       FONT AWESOME
+       ========================================== -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <!-- ==========================================
+       PAPAPARSE
+       ========================================== -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"
+  ></script>
+
+  <!-- ==========================================
+       DATOS ESTRUCTURADOS DE LA TIENDA
+       ========================================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "OnlineStore",
     "name": "SUYAI.store",
-    "url": "https://tu-dominio.com/",
-    "logo": "https://tu-dominio.com/logo.png",
-    "description": "Tienda oficial de ropa, calzado y tecnología con envíos a todo el Perú.",
+    "url": "https://www.suyai.store/",
+    "logo": "https://www.suyai.store/logo.png",
+    "description": "Tienda online de zapatillas, calzado, polos, moda, tecnología y productos de belleza en Perú.",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "PE"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Perú"
     }
   }
   </script>
 
-  <!-- Contenedor dinámico para el Schema Markup del Producto -->
+  <!-- Schema dinámico de productos -->
   <script id="schema-product-json" type="application/ld+json"></script>
 
   <style>
+
     :root {
       --navy: #0b132b;
       --navy-light: #1c2541;
@@ -62,10 +118,23 @@
       --star: #ffb703;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
-    body { background-color: var(--bg); color: var(--text); padding-bottom: 80px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
 
-    /* CABECERA Y BUSCADOR */
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding-bottom: 80px;
+    }
+
+    /* ==========================================
+       CABECERA
+       ========================================== */
+
     header {
       background: var(--navy);
       color: white;
@@ -93,7 +162,10 @@
       color: white;
       text-decoration: none;
     }
-    .logo span { color: var(--cyan); }
+
+    .logo span {
+      color: var(--cyan);
+    }
 
     .search-box {
       flex: 1;
@@ -112,9 +184,12 @@
       color: white;
       font-size: 0.95rem;
       outline: none;
-      transition: all 0.3s;
     }
-    .search-box input::placeholder { color: #94a3b8; }
+
+    .search-box input::placeholder {
+      color: #94a3b8;
+    }
+
     .search-box input:focus {
       background: rgba(255,255,255,0.18);
       border-color: var(--cyan);
@@ -147,15 +222,22 @@
       align-items: center;
       gap: 8px;
       cursor: pointer;
-      transition: background 0.2s;
     }
-    .cart-btn:hover { background: rgba(255,255,255,0.2); }
+
+    .cart-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
     .cart-btn span {
       background: var(--accent);
       font-size: 0.75rem;
       padding: 2px 7px;
       border-radius: 10px;
     }
+
+    /* ==========================================
+       BARRA DE CONFIANZA
+       ========================================== */
 
     .trust-bar {
       background: white;
@@ -169,17 +251,56 @@
       gap: 20px;
       flex-wrap: wrap;
     }
-    .trust-item { display: flex; align-items: center; gap: 6px; }
-    .badge-official { background: #ffe4e6; color: var(--accent); padding: 2px 8px; border-radius: 4px; }
 
-    .main-container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-    .seo-links-container { margin: 10px 0 20px 0; font-size: 0.8rem; color: var(--text-muted); }
-    .seo-links-container a { color: var(--navy); text-decoration: none; font-weight: 600; }
+    .badge-official {
+      background: #ffe4e6;
+      color: var(--accent);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
 
-    /* BANNER SUPERIOR */
+    /* ==========================================
+       CONTENEDOR PRINCIPAL
+       ========================================== */
+
+    .main-container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    /* ==========================================
+       MIGAS DE PAN
+       ========================================== */
+
+    .seo-links-container {
+      margin: 10px 0 20px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .seo-links-container a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ==========================================
+       BANNER
+       ========================================== */
+
     .hero-banner {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      background: linear-gradient(
+        135deg,
+        var(--navy) 0%,
+        var(--navy-light) 100%
+      );
       border-radius: 16px;
       padding: 25px;
       color: white;
@@ -197,7 +318,13 @@
       margin-top: 8px;
       text-transform: uppercase;
     }
-    .banner-info p { color: #94a3b8; font-size: 0.85rem; margin-top: 8px; }
+
+    .banner-info p {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+
     .tag-destacado {
       background: var(--accent);
       color: white;
@@ -227,7 +354,10 @@
       text-decoration: none;
       transition: transform 0.2s ease;
     }
-    .mini-card-banner:hover { transform: translateY(-3px); }
+
+    .mini-card-banner:hover {
+      transform: translateY(-3px);
+    }
 
     .mini-card-banner .img-box {
       width: 100%;
@@ -247,12 +377,28 @@
       object-fit: cover;
     }
 
-    .mini-card-banner .title { font-size: 0.8rem; font-weight: 700; color: var(--text); text-align: center; }
-    .mini-card-banner .price { font-size: 1rem; font-weight: 900; color: var(--accent); margin-top: 4px; }
+    .mini-card-banner .title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text);
+      text-align: center;
+    }
 
-    /* SECCIÓN DE CATEGORÍAS */
-    .visual-categories-section { margin: 30px 0 20px 0; }
-    
+    .mini-card-banner .price {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    /* ==========================================
+       CATEGORÍAS
+       ========================================== */
+
+    .visual-categories-section {
+      margin: 30px 0 20px;
+    }
+
     .categories-header-bar {
       display: flex;
       justify-content: space-between;
@@ -268,7 +414,10 @@
       color: var(--navy);
       letter-spacing: -0.5px;
     }
-    .visual-categories-title span { color: var(--green-dot); }
+
+    .visual-categories-title span {
+      color: var(--green-dot);
+    }
 
     .select-custom {
       padding: 10px 18px;
@@ -280,19 +429,15 @@
       color: var(--navy);
       outline: none;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-      transition: all 0.3s ease;
     }
 
     .visual-categories-grid {
       display: flex;
       gap: 18px;
       overflow-x: auto;
-      padding: 10px 5px 20px 5px;
+      padding: 10px 5px 20px;
       scrollbar-width: thin;
     }
-    .visual-categories-grid::-webkit-scrollbar { height: 6px; }
-    .visual-categories-grid::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 
     .category-card-visual {
       flex: 0 0 190px;
@@ -302,14 +447,15 @@
       overflow: hidden;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition: all 0.3s ease;
       border: 2px solid transparent;
     }
-    .category-card-visual:hover { 
-      transform: translateY(-8px); 
-      box-shadow: 0 15px 30px rgba(11, 19, 43, 0.15);
+
+    .category-card-visual:hover {
+      transform: translateY(-8px);
     }
-    .category-card-visual.active { 
+
+    .category-card-visual.active {
       border-color: var(--accent);
       box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.25);
     }
@@ -318,14 +464,22 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition: transform 0.6s ease;
     }
-    .category-card-visual:hover img { transform: scale(1.12); }
+
+    .category-card-visual:hover img {
+      transform: scale(1.12);
+    }
 
     .category-card-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(11, 19, 43, 0.95) 0%, rgba(11, 19, 43, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(
+        to top,
+        rgba(11,19,43,0.95) 0%,
+        rgba(11,19,43,0.2) 60%,
+        transparent 100%
+      );
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -342,14 +496,40 @@
       align-items: center;
       justify-content: space-between;
     }
-    .category-card-title span { color: var(--green-dot); }
 
-    /* BLOQUES DE PRODUCTOS */
-    .category-block-section { margin: 40px 0; }
-    .category-block-header { text-align: center; margin-bottom: 25px; }
-    .category-block-header h2 { font-size: 2.2rem; font-weight: 900; color: #0f172a; letter-spacing: -0.5px; }
-    .category-block-header h2 span { color: var(--green-dot); }
-    .category-block-header p { font-size: 0.95rem; color: var(--text-muted); margin-top: 3px; font-weight: 500; }
+    .category-card-title span {
+      color: var(--green-dot);
+    }
+
+    /* ==========================================
+       PRODUCTOS
+       ========================================== */
+
+    .category-block-section {
+      margin: 40px 0;
+    }
+
+    .category-block-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .category-block-header h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .category-block-header h2 span {
+      color: var(--green-dot);
+    }
+
+    .category-block-header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+      font-weight: 500;
+    }
 
     .category-block-grid {
       display: grid;
@@ -369,12 +549,11 @@
       justify-content: space-between;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .category-promo-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
 
     .category-promo-card img.bg-img {
@@ -388,7 +567,9 @@
       transition: transform 0.5s ease;
     }
 
-    .category-promo-card:hover img.bg-img { transform: scale(1.06); }
+    .category-promo-card:hover img.bg-img {
+      transform: scale(1.06);
+    }
 
     .promo-top-label {
       position: relative;
@@ -405,8 +586,13 @@
     .promo-bottom-bar {
       position: relative;
       z-index: 2;
-      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%);
-      padding: 20px 15px 15px 15px;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.4) 70%,
+        transparent
+      );
+      padding: 20px 15px 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -419,16 +605,36 @@
       font-weight: 900;
       font-size: 0.95rem;
       border-radius: 4px;
-      line-height: 1.1;
-      box-shadow: 0 4px 10px rgba(255,0,51,0.4);
     }
-    .promo-discount-badge small { display: block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.5px; }
 
-    .promo-title-info { color: white; text-align: right; }
-    .promo-title-info h4 { font-size: 0.95rem; font-weight: 800; margin-bottom: 2px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-    .promo-title-info span { font-size: 0.85rem; font-weight: 900; color: var(--cyan); }
+    .promo-discount-badge small {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 700;
+    }
 
-    /* OPCIONES DE PRODUCTO EN MODAL */
+    .promo-title-info {
+      color: white;
+      text-align: right;
+    }
+
+    .promo-title-info h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .promo-title-info span {
+      font-size: 0.85rem;
+      font-weight: 900;
+      color: var(--cyan);
+    }
+
+    /* ==========================================
+       GALERÍA Y OPCIONES
+       ========================================== */
+
     .product-options-box {
       background: #f8fafc;
       border-radius: 8px;
@@ -438,9 +644,27 @@
       gap: 8px;
       margin-top: 8px;
     }
-    .option-group { display: flex; align-items: center; gap: 8px; }
-    .option-label { font-size: 0.7rem; font-weight: 800; color: var(--text-muted); width: 50px; text-transform: uppercase; }
-    .option-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .option-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .option-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      width: 50px;
+      text-transform: uppercase;
+    }
+
+    .option-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
     .badge-opt {
       font-size: 0.75rem;
       font-weight: 700;
@@ -451,13 +675,19 @@
       color: var(--text);
       cursor: pointer;
     }
-    .badge-opt.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+    .badge-opt.active {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
 
     .product-gallery-thumbs {
       display: flex;
       gap: 6px;
       margin-bottom: 10px;
     }
+
     .thumb-img {
       width: 42px;
       height: 42px;
@@ -466,7 +696,10 @@
       object-fit: cover;
       cursor: pointer;
     }
-    .thumb-img.active { border: 2px solid var(--accent); }
+
+    .thumb-img.active {
+      border: 2px solid var(--accent);
+    }
 
     .btn-add-cart {
       background: var(--navy);
@@ -485,7 +718,10 @@
       margin-top: 10px;
     }
 
-    /* CARRITO DE COMPRAS */
+    /* ==========================================
+       CARRITO
+       ========================================== */
+
     .cart-drawer {
       position: fixed;
       top: 0;
@@ -500,7 +736,10 @@
       flex-direction: column;
       transition: right 0.3s ease;
     }
-    .cart-drawer.open { right: 0; }
+
+    .cart-drawer.open {
+      right: 0;
+    }
 
     .cart-header {
       padding: 20px;
@@ -510,20 +749,91 @@
       justify-content: space-between;
       align-items: center;
     }
-    .close-drawer { background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; }
 
-    .cart-items { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
-    .cart-item { display: flex; gap: 12px; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
-    .cart-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; }
-    .cart-item-details { flex: 1; }
-    .cart-item-details h4 { font-size: 0.85rem; font-weight: 700; }
-    .cart-item-details p { font-size: 0.75rem; color: var(--text-muted); }
-    .qty-controls { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
-    .qty-btn { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--border); background: #f1f5f9; cursor: pointer; font-weight: 700; }
-    .btn-remove-item { color: #ef4444; background: none; border: none; cursor: pointer; }
+    .close-drawer {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
 
-    .cart-footer { padding: 20px; border-top: 1px solid var(--border); background: #f8fafc; }
-    .cart-total { display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 800; margin-bottom: 15px; color: var(--navy); }
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .cart-item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .cart-item-details {
+      flex: 1;
+    }
+
+    .cart-item-details h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .cart-item-details p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .qty-btn {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: #f1f5f9;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .btn-remove-item {
+      color: #ef4444;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      background: #f8fafc;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: var(--navy);
+    }
 
     .btn-send-whatsapp {
       background: #25d366;
@@ -541,13 +851,13 @@
       gap: 8px;
     }
 
-    /* MODAL */
+    /* ==========================================
+       MODAL
+       ========================================== */
+
     .modal-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: rgba(0,0,0,0.6);
       display: flex;
       align-items: center;
@@ -558,7 +868,11 @@
       transition: opacity 0.3s ease;
       padding: 15px;
     }
-    .modal-overlay.active { opacity: 1; pointer-events: all; }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
 
     .modal-card {
       background: white;
@@ -571,22 +885,67 @@
       position: relative;
     }
 
-    .modal-close { position: absolute; top: 10px; right: 15px; background: transparent; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; z-index: 10; }
-    .modal-img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
-    .modal-body { padding: 25px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
-
-    .modal-price-box {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
-      gap: 10px !important;
-      margin: 12px 0 !important;
-      flex-wrap: wrap !important;
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      z-index: 10;
     }
 
-    .precio-tachado { font-size: 0.95rem !important; font-weight: 600 !important; color: #9ca3af !important; text-decoration: line-through !important; }
-    .precio-actual { font-size: 1.35rem !important; font-weight: 900 !important; color: #0f172a !important; }
-    .badge-descuento { background-color: #e11d48 !important; color: #ffffff !important; font-size: 0.75rem !important; font-weight: 800 !important; padding: 3px 8px !important; border-radius: 4px !important; }
+    .modal-img {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+    }
+
+    .modal-body {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .modal-price-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      margin: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .precio-tachado {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #9ca3af;
+      text-decoration: line-through;
+    }
+
+    .precio-actual {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .badge-descuento {
+      background-color: #e11d48;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* ==========================================
+       NOTIFICACIÓN
+       ========================================== */
 
     .live-notification {
       position: fixed;
@@ -605,667 +964,2739 @@
       max-width: 320px;
       border-left: 4px solid var(--accent);
     }
-    .live-notification.show { transform: translateY(0); }
-    .live-notification img { width: 45px; height: 45px; border-radius: 8px; object-fit: cover; }
 
-    /* RESPONSIVE */
+    .live-notification.show {
+      transform: translateY(0);
+    }
+
+    .live-notification img {
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+
     @media (max-width: 900px) {
-      .category-block-grid { grid-template-columns: repeat(2, 1fr); }
+      .category-block-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
+
     @media (max-width: 600px) {
-      .header-container { flex-direction: column; align-items: stretch; gap: 10px; }
-      .search-box { max-width: 100%; }
-      .hero-banner { grid-template-columns: 1fr; padding: 18px; }
-      .category-block-grid { grid-template-columns: 1fr; }
-      .category-promo-card { height: 300px; }
-      .modal-card { grid-template-columns: 1fr; max-height: 90vh; overflow-y: auto; }
-      .modal-img { height: 220px; min-height: auto; }
+
+      .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .search-box {
+        max-width: 100%;
+      }
+
+      .hero-banner {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+
+      .category-block-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-promo-card {
+        height: 300px;
+      }
+
+      .modal-card {
+        grid-template-columns: 1fr;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+
+      .modal-img {
+        height: 220px;
+        min-height: auto;
+      }
     }
+
   </style>
 </head>
+
 <body>
 
-  <!-- CABECERA -->
+  <!-- ==========================================
+       CABECERA
+       ========================================== -->
+
   <header>
     <div class="header-container">
-      <a href="/" class="logo">SUYAI <span>.store</span></a>
-      
+
+      <a href="/" class="logo">
+        SUYAI<span>.store</span>
+      </a>
+
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Buscar productos..." oninput="ejecutarBusqueda()">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar productos..."
+          oninput="ejecutarBusqueda()"
+        >
+
+        <button type="button" onclick="ejecutarBusqueda()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
 
-      <div class="cart-btn" onclick="toggleCarrito()">
-        <i class="fa-solid fa-cart-shopping"></i> Carrito <span id="cartCount">0</span>
-      </div>
+      <button class="cart-btn" type="button" onclick="toggleCarrito()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Carrito
+        <span id="cartCount">0</span>
+      </button>
+
     </div>
   </header>
 
-  <!-- BARRA DE CONFIANZA -->
+  <!-- ==========================================
+       BARRA DE CONFIANZA
+       ========================================== -->
+
   <div class="trust-bar">
     <span class="badge-official">SUYAI Oficial</span>
-    <span class="trust-item"><i class="fa-solid fa-truck-fast"></i> Envíos a todo el Perú</span>
-    <span class="trust-item"><i class="fa-solid fa-shield-halved"></i> Pago 100% Seguro</span>
+
+    <span class="trust-item">
+      <i class="fa-solid fa-truck-fast"></i>
+      Envíos a todo el Perú
+    </span>
+
+    <span class="trust-item">
+      <i class="fa-solid fa-shield-halved"></i>
+      Pago 100% Seguro
+    </span>
   </div>
 
+  <!-- ==========================================
+       CONTENIDO PRINCIPAL
+       ========================================== -->
+
   <main class="main-container">
-    
-    <!-- MIGAS DE PAN (BREADCRUMBS PARA SEO) -->
-    <nav class="seo-links-container">
-      <a href="/">Inicio</a> &gt; <span id="currentCategoryBreadcrumb">Catálogo General</span>
+
+    <!-- MIGAS DE PAN -->
+    <nav class="seo-links-container" aria-label="Navegación">
+      <a href="/">Inicio</a>
+      &gt;
+      <span id="currentCategoryBreadcrumb">
+        Catálogo General
+      </span>
     </nav>
 
-    <!-- BANNER SUPERIOR CON DESTACADOS -->
+    <!-- ========================================
+         BANNER
+         ======================================== -->
+
     <section class="hero-banner">
+
       <div class="banner-info">
-        <span class="tag-destacado">TOP SUYAI</span>
-        <h2>OFERTAS DESTACADAS</h2>
-        <p>Selección especial sincronizada en tiempo real desde nuestro catálogo.</p>
+        <span class="tag-destacado">
+          TOP SUYAI
+        </span>
+
+        <h2>
+          OFERTAS DESTACADAS
+        </h2>
+
+        <p>
+          Selección especial de nuestros productos destacados.
+        </p>
       </div>
-      <div class="banner-grid-products" id="bannerTopProducts"></div>
+
+      <div
+        class="banner-grid-products"
+        id="bannerTopProducts"
+      ></div>
+
     </section>
 
-    <!-- BUSCA POR CATEGORÍA -->
+    <!-- ========================================
+         CATEGORÍAS
+         ======================================== -->
+
     <section class="visual-categories-section">
+
       <div class="categories-header-bar">
-        <h2 class="visual-categories-title">Busca por categoría<span>.</span></h2>
-        
+
+        <h2 class="visual-categories-title">
+          Busca por categoría<span>.</span>
+        </h2>
+
         <div>
-          <select class="select-custom" id="sortSelect" onchange="ejecutarBusqueda()">
-            <option value="default">Ordenar por: Relevancia</option>
-            <option value="price-asc">Precio: Menor a Mayor</option>
-            <option value="price-desc">Precio: Mayor a Menor</option>
-            <option value="rating-desc">Mejor Valorados</option>
+
+          <select
+            class="select-custom"
+            id="sortSelect"
+            onchange="ejecutarBusqueda()"
+          >
+
+            <option value="default">
+              Ordenar por: Relevancia
+            </option>
+
+            <option value="price-asc">
+              Precio: Menor a Mayor
+            </option>
+
+            <option value="price-desc">
+              Precio: Mayor a Menor
+            </option>
+
+            <option value="rating-desc">
+              Mejor Valorados
+            </option>
+
           </select>
+
         </div>
+
       </div>
 
-      <div class="visual-categories-grid" id="visualCategoriesGrid"></div>
+      <div
+        class="visual-categories-grid"
+        id="visualCategoriesGrid"
+      ></div>
+
     </section>
 
-    <!-- CONTENEDOR DE BLOQUES POR CATEGORÍA -->
+    <!-- ========================================
+         PRODUCTOS
+         ======================================== -->
+
     <div id="categoryBlocksContainer"></div>
 
   </main>
 
-  <!-- PANEL DESPLEGABLE DEL CARRITO DE COMPRAS -->
+  <!-- ==========================================
+       CARRITO
+       ========================================== -->
+
   <div class="cart-drawer" id="cartDrawer">
+
     <div class="cart-header">
-      <h3>Tu Carrito de Compras</h3>
-      <button class="close-drawer" onclick="toggleCarrito()">&times;</button>
-    </div>
-    <div class="cart-items" id="cartItemsContainer">
-      <p style="text-align: center; color: var(--text-muted); margin-top: 20px;">Tu carrito está vacío.</p>
-    </div>
-    <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total:</span>
-        <span id="cartTotalText">S/ 0.00</span>
-      </div>
-      <button class="btn-send-whatsapp" onclick="enviarPedidoWhatsApp()">
-        <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+
+      <h3>
+        Tu Carrito de Compras
+      </h3>
+
+      <button
+        class="close-drawer"
+        type="button"
+        onclick="toggleCarrito()"
+      >
+        &times;
       </button>
+
     </div>
-  </div>
 
-  <!-- MODAL DE PRODUCTO -->
-  <div class="modal-overlay" id="previewModal" onclick="cerrarModal(event)">
-    <div class="modal-card" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="cerrarModalDirecto()">&times;</button>
-      <img id="modalImg" class="modal-img" src="" alt="Producto">
-      <div class="modal-body">
-        <span class="cat" id="modalCat" style="font-size:0.75rem; font-weight:800; color:var(--accent);">CATEGORÍA</span>
-        <h1 id="modalTitle" style="font-size:1.3rem; font-weight:800;">Título del Producto</h1>
-        
-        <div class="product-rating" id="modalRating" style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px;"></div>
-        
-        <p class="desc" id="modalDesc" style="font-size:0.85rem; color:var(--text-muted);">Cargando descripción...</p>
-        
-        <div id="modalGallery" class="product-gallery-thumbs" style="margin-top: 5px;"></div>
+    <div
+      class="cart-items"
+      id="cartItemsContainer"
+    >
+      <p
+        style="
+          text-align:center;
+          color:var(--text-muted);
+          margin-top:20px;
+        "
+      >
+        Tu carrito está vacío.
+      </p>
+    </div>
 
-        <div class="product-options-box" id="modalOptions"></div>
-        
-        <div id="modalPriceContainer" class="modal-price-box"></div>
-        
-        <div id="modalStock" style="font-size:0.75rem; font-weight:700; color:#16a34a; margin-top:2px;"></div>
+    <div class="cart-footer">
 
-        <button id="modalAddBtn" class="btn-add-cart">
-          <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
-        </button>
+      <div class="cart-total">
+
+        <span>
+          Total:
+        </span>
+
+        <span id="cartTotalText">
+          S/ 0.00
+        </span>
+
       </div>
+
+      <button
+        class="btn-send-whatsapp"
+        type="button"
+        onclick="enviarPedidoWhatsApp()"
+      >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        Finalizar Pedido por WhatsApp
+
+      </button>
+
     </div>
+
   </div>
 
-  <!-- NOTIFICACIÓN FLOTANTE -->
-  <div class="live-notification" id="liveNotif">
-    <img id="notifImg" src="" alt="Producto">
-    <div class="info">
-      <strong id="notifUser">Jorge L. (Piura)</strong>
-      <span>compró <span id="notifProd">POLO MARRUKIN</span></span>
-      <div style="color: var(--text-muted); font-size: 0.65rem; margin-top: 2px;">Hace 5 min • Compra Verificada</div>
+  <!-- ==========================================
+       MODAL PRODUCTO
+       ========================================== -->
+
+  <div
+    class="modal-overlay"
+    id="previewModal"
+    onclick="cerrarModal(event)"
+  >
+
+    <div
+      class="modal-card"
+      onclick="event.stopPropagation()"
+    >
+
+      <button
+        class="modal-close"
+        type="button"
+        onclick="cerrarModalDirecto()"
+      >
+        &times;
+      </button>
+
+      <img
+        id="modalImg"
+        class="modal-img"
+        src=""
+        alt="Producto SUYAI"
+      >
+
+      <div class="modal-body">
+
+        <span
+          class="cat"
+          id="modalCat"
+          style="
+            font-size:0.75rem;
+            font-weight:800;
+            color:var(--accent);
+          "
+        >
+          CATEGORÍA
+        </span>
+
+        <h1
+          id="modalTitle"
+          style="
+            font-size:1.3rem;
+            font-weight:800;
+          "
+        >
+          Producto
+        </h1>
+
+        <div
+          class="product-rating"
+          id="modalRating"
+          style="
+            font-size:0.8rem;
+            color:var(--text-muted);
+            display:flex;
+            align-items:center;
+            gap:4px;
+          "
+        ></div>
+
+        <p
+          class="desc"
+          id="modalDesc"
+          style="
+            font-size:0.85rem;
+            color:var(--text-muted);
+          "
+        >
+          Cargando descripción...
+        </p>
+
+        <div
+          id="modalGallery"
+          class="product-gallery-thumbs"
+        ></div>
+
+        <div
+          class="product-options-box"
+          id="modalOptions"
+        ></div>
+
+        <div
+          id="modalPriceContainer"
+          class="modal-price-box"
+        ></div>
+
+        <div
+          id="modalStock"
+          style="
+            font-size:0.75rem;
+            font-weight:700;
+            color:#16a34a;
+          "
+        ></div>
+
+        <button
+          id="modalAddBtn"
+          class="btn-add-cart"
+          type="button"
+        >
+          <i class="fa-solid fa-cart-plus"></i>
+          Agregar al Carrito
+        </button>
+
+      </div>
+
     </div>
+
   </div>
+
+  <!-- ==========================================
+       NOTIFICACIÓN
+       ========================================== -->
+
+  <div
+    class="live-notification"
+    id="liveNotif"
+  >
+
+    <img
+      id="notifImg"
+      src=""
+      alt="Producto"
+    >
+
+    <div class="info">
+
+      <strong id="notifUser">
+        Cliente de Perú
+      </strong>
+
+      <span>
+        compró
+        <span id="notifProd">
+          un producto
+        </span>
+      </span>
+
+      <div
+        style="
+          color:var(--text-muted);
+          font-size:0.65rem;
+          margin-top:2px;
+        "
+      >
+        Compra verificada
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ==========================================
+       JAVASCRIPT
+       ========================================== -->
 
   <script>
-    const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQWM1GELO6-3yw4zP2JkODo5YpDYrnDVKtRDu-sJwfAX875Dr4Soix33Hl055ceU0BTnQQNvFYLohFB/pub?output=csv';
+
+    /* ==========================================
+       CONFIGURACIÓN
+       ========================================== */
+
+    const CSV_URL =
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vQWM1GELO6-3yw4zP2JkODo5YpDYrnDVKtRDu-sJwfAX875Dr4Soix33Hl055ceU0BTnQQNvFYLohFB/pub?output=csv';
+
+    /*
+      CAMBIA ESTE NÚMERO POR TU WHATSAPP REAL.
+      Formato:
+      519XXXXXXXX
+    */
     const NUMERO_WHATSAPP = '51999999999';
-    const FALLBACK_IMG = 'https://placehold.co/400x400?text=Sin+Imagen';
+
+    const FALLBACK_IMG =
+      'https://placehold.co/400x400?text=Sin+Imagen';
 
     let productosGlobales = [];
+
     let carrito = [];
+
     let categoriaActual = 'todas';
+
     let seleccionesUsuario = {};
+
     let productoModalActual = null;
 
-    const IMAGENES_IA_CATEGORIAS = {
-      'todas': 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
-      'polos': 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
-      'zapatillas': 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
-      'tecnologia': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-      'calzado': 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80',
-      'moda.mujer': 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
-      'moda.hombre': 'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=80',
-      'belleza': 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'
+
+    /* ==========================================
+       IMÁGENES DE CATEGORÍAS
+       ========================================== */
+
+    const IMAGENES_CATEGORIAS = {
+
+      todas:
+        'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
+
+      polos:
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+
+      zapatillas:
+        'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
+
+      tecnologia:
+        'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+
+      calzado:
+        'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80',
+
+      'moda.mujer':
+        'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
+
+      'moda.hombre':
+        'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=80',
+
+      belleza:
+        'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80'
+
     };
+
 
     const SUBTITULOS_CATEGORIA = {
-      'calzado': 'Eleva tu look',
-      'moda.mujer': 'Estilo & Tendencia',
-      'moda.hombre': 'Elegancia y Confort',
-      'tecnología': 'Lo último en innovación',
-      'belleza': 'Cuidado personal y estética',
-      'decohogar': 'Transforma tus espacios'
+
+      calzado:
+        'Eleva tu look',
+
+      'moda.mujer':
+        'Estilo y Tendencia',
+
+      'moda.hombre':
+        'Elegancia y Confort',
+
+      tecnologia:
+        'Lo último en innovación',
+
+      belleza:
+        'Cuidado personal y estética',
+
+      decohogar:
+        'Transforma tus espacios',
+
+      polos:
+        'Estilo para todos los días',
+
+      zapatillas:
+        'Comodidad y estilo'
+
     };
 
-    document.addEventListener('DOMContentLoaded', async () => {
-      await cargarCatalogo();
 
-      window.addEventListener('hashchange', procesarUrlHash);
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') cerrarModalDirecto();
-      });
-    });
+    /* ==========================================
+       INICIO
+       ========================================== */
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      async function() {
+
+        await cargarCatalogo();
+
+        window.addEventListener(
+          'hashchange',
+          procesarUrlHash
+        );
+
+        document.addEventListener(
+          'keydown',
+          function(e) {
+
+            if (e.key === 'Escape') {
+              cerrarModalDirecto();
+            }
+
+          }
+        );
+
+      }
+    );
+
+
+    /* ==========================================
+       CONVERTIR NÚMEROS
+       ========================================== */
 
     function parsearNumero(valor) {
-      if (!valor) return 0;
-      let s = valor.toString().replace(/[^0-9.,]/g, '').trim();
-      if (s.includes(',') && s.includes('.')) s = s.replace(/\./g, '').replace(',', '.');
-      else if (s.includes(',')) s = s.replace(',', '.');
+
+      if (!valor) {
+        return 0;
+      }
+
+      let s =
+        valor
+          .toString()
+          .replace(/[^0-9.,]/g, '')
+          .trim();
+
+      if (
+        s.includes(',') &&
+        s.includes('.')
+      ) {
+
+        s =
+          s
+            .replace(/\./g, '')
+            .replace(',', '.');
+
+      } else if (s.includes(',')) {
+
+        s =
+          s.replace(',', '.');
+
+      }
+
       const num = parseFloat(s);
+
       return isNaN(num) ? 0 : num;
+
     }
+
+
+    /* ==========================================
+       OBTENER DATOS
+       ========================================== */
 
     function obtenerValor(obj, claves) {
-      for (let k of claves) {
-        if (obj[k] !== undefined && obj[k] !== null && obj[k] !== '') {
-          return obj[k].toString().trim();
+
+      for (const k of claves) {
+
+        if (
+          obj[k] !== undefined &&
+          obj[k] !== null &&
+          obj[k] !== ''
+        ) {
+
+          return obj[k]
+            .toString()
+            .trim();
+
         }
+
       }
+
       return '';
+
     }
+
+
+    /* ==========================================
+       CARGAR CATÁLOGO
+       ========================================== */
 
     async function cargarCatalogo() {
+
       try {
-        const res = await fetch(`${CSV_URL}&_t=${Date.now()}`);
-        if (!res.ok) throw new Error("No se pudo conectar a la hoja de datos.");
+
+        const res = await fetch(
+          `${CSV_URL}&_t=${Date.now()}`
+        );
+
+        if (!res.ok) {
+          throw new Error(
+            'No se pudo conectar con Google Sheets.'
+          );
+        }
+
         const text = await res.text();
 
-        Papa.parse(text, {
-          header: true,
-          skipEmptyLines: true,
-          complete: function(results) {
-            productosGlobales = results.data.map((r, i) => {
-              const rowNorm = {};
-              Object.keys(r).forEach(k => { if (k) rowNorm[k.toLowerCase().trim()] = r[k]; });
+        Papa.parse(
+          text,
+          {
 
-              const id = obtenerValor(rowNorm, ['id']) || `prod_${i}`;
-              const titulo = obtenerValor(rowNorm, ['titulo', 'nombre', 'producto', 'title']);
-              const descripcion = obtenerValor(rowNorm, ['descripcion', 'desc', 'detalle']) || 'Producto de excelente calidad disponible en nuestra tienda.';
-              
-              const precioActual = parsearNumero(obtenerValor(rowNorm, ['precio', 'precio_actual', 'costo', 'price']));
-              const precioAnterior = parsearNumero(obtenerValor(rowNorm, ['precio_anterior', 'precio anterior', 'precio_old']));
-              const descuentoCol = parsearNumero(obtenerValor(rowNorm, ['descuento', 'descuentos', 'oferta']));
+            header: true,
 
-              const stock = parsearNumero(obtenerValor(rowNorm, ['stock', 'cantidad'])) || 10;
-              const rating = parsearNumero(obtenerValor(rowNorm, ['rating', 'estrellas', 'puntuacion'])) || 5.0;
-              const resenas = parsearNumero(obtenerValor(rowNorm, ['resenas', 'reseñas', 'reviews'])) || 1;
-              const categoria = obtenerValor(rowNorm, ['categoria', 'cat']) || 'General';
+            skipEmptyLines: true,
 
-              const rawImg = obtenerValor(rowNorm, ['imagen', 'foto', 'url', 'image']);
-              let arrayImg = rawImg.split(',').map(u => u.trim()).filter(u => u.length > 0);
-              if (arrayImg.length === 0) arrayImg = [FALLBACK_IMG];
+            complete: function(results) {
 
-              const tallas = obtenerValor(rowNorm, ['talla', 'tallas', 'sizes']).split(',').map(t => t.trim()).filter(t => t.length > 0);
-              const colores = obtenerValor(rowNorm, ['color', 'colores', 'colors']).split(',').map(c => c.trim()).filter(c => c.length > 0);
-              const esDestacado = obtenerValor(rowNorm, ['destacado', 'destacados', 'top']).toLowerCase() === 'si';
+              productosGlobales =
+                results.data
+                  .map(function(r, i) {
 
-              let pctDescuentoNum = 0;
-              if (precioAnterior > precioActual && precioActual > 0) {
-                pctDescuentoNum = Math.round((1 - (precioActual / precioAnterior)) * 100);
-              } else if (descuentoCol > 0) {
-                pctDescuentoNum = descuentoCol;
-              }
+                    const rowNorm = {};
 
-              seleccionesUsuario[id] = {
-                talla: tallas[0] || '',
-                color: colores[0] || '',
-                imagenActual: arrayImg[0]
-              };
+                    Object.keys(r).forEach(function(k) {
 
-              return {
-                id, titulo: titulo || 'Producto SUYAI', descripcion, precio: precioActual, precioAnterior,
-                stock, rating, resenas, categoria, imagenes: arrayImg, imagen: arrayImg[0],
-                tallas, colores, pctDescuento: pctDescuentoNum,
-                precioText: `S/ ${precioActual.toFixed(2)}`,
-                precioAnteriorText: precioAnterior > 0 ? `S/ ${precioAnterior.toFixed(2)}` : '',
-                esDestacado
-              };
-            }).filter(p => p.titulo !== 'Producto SUYAI');
+                      if (k) {
+                        rowNorm[
+                          k.toLowerCase().trim()
+                        ] = r[k];
+                      }
 
-            renderizarCategoriasSlider();
-            renderizarBannerTop();
-            ejecutarBusqueda();
-            procesarUrlHash();
-            iniciarNotificaciones();
+                    });
+
+
+                    const id =
+                      obtenerValor(
+                        rowNorm,
+                        ['id']
+                      ) ||
+                      `prod_${i}`;
+
+
+                    const titulo =
+                      obtenerValor(
+                        rowNorm,
+                        [
+                          'titulo',
+                          'nombre',
+                          'producto',
+                          'title'
+                        ]
+                      );
+
+
+                    const descripcion =
+                      obtenerValor(
+                        rowNorm,
+                        [
+                          'descripcion',
+                          'desc',
+                          'detalle'
+                        ]
+                      ) ||
+                      'Producto disponible en SUYAI.store.';
+
+
+                    const precioActual =
+                      parsearNumero(
+                        obtenerValor(
+                          rowNorm,
+                          [
+                            'precio',
+                            'precio_actual',
+                            'costo',
+                            'price'
+                          ]
+                        )
+                      );
+
+
+                    const precioAnterior =
+                      parsearNumero(
+                        obtenerValor(
+                          rowNorm,
+                          [
+                            'precio_anterior',
+                            'precio anterior',
+                            'precio_old'
+                          ]
+                        )
+                      );
+
+
+                    const descuentoCol =
+                      parsearNumero(
+                        obtenerValor(
+                          rowNorm,
+                          [
+                            'descuento',
+                            'descuentos',
+                            'oferta'
+                          ]
+                        )
+                      );
+
+
+                    const stock =
+                      parsearNumero(
+                        obtenerValor(
+                          rowNorm,
+                          [
+                            'stock',
+                            'cantidad'
+                          ]
+                        )
+                      ) || 10;
+
+
+                    const rating =
+                      parsearNumero(
+                        obtenerValor(
+                          rowNorm,
+                          [
+                            'rating',
+                            'estrellas',
+                            'puntuacion'
+                          ]
+                        )
+                      ) || 5;
+
+
+                    const resenas =
+                      parsearNumero(
+                        obtenerValor(
+                          rowNorm,
+                          [
+                            'resenas',
+                            'reseñas',
+                            'reviews'
+                          ]
+                        )
+                      ) || 1;
+
+
+                    const categoria =
+                      obtenerValor(
+                        rowNorm,
+                        [
+                          'categoria',
+                          'cat'
+                        ]
+                      ) ||
+                      'General';
+
+
+                    const rawImg =
+                      obtenerValor(
+                        rowNorm,
+                        [
+                          'imagen',
+                          'foto',
+                          'url',
+                          'image'
+                        ]
+                      );
+
+
+                    let arrayImg =
+                      rawImg
+                        .split(',')
+                        .map(
+                          u => u.trim()
+                        )
+                        .filter(
+                          u => u.length > 0
+                        );
+
+
+                    if (
+                      arrayImg.length === 0
+                    ) {
+
+                      arrayImg = [
+                        FALLBACK_IMG
+                      ];
+
+                    }
+
+
+                    const tallas =
+                      obtenerValor(
+                        rowNorm,
+                        [
+                          'talla',
+                          'tallas',
+                          'sizes'
+                        ]
+                      )
+                      .split(',')
+                      .map(
+                        t => t.trim()
+                      )
+                      .filter(
+                        t => t.length > 0
+                      );
+
+
+                    const colores =
+                      obtenerValor(
+                        rowNorm,
+                        [
+                          'color',
+                          'colores',
+                          'colors'
+                        ]
+                      )
+                      .split(',')
+                      .map(
+                        c => c.trim()
+                      )
+                      .filter(
+                        c => c.length > 0
+                      );
+
+
+                    const esDestacado =
+                      obtenerValor(
+                        rowNorm,
+                        [
+                          'destacado',
+                          'destacados',
+                          'top'
+                        ]
+                      )
+                      .toLowerCase() === 'si';
+
+
+                    let pctDescuentoNum = 0;
+
+
+                    if (
+                      precioAnterior >
+                      precioActual &&
+                      precioActual > 0
+                    ) {
+
+                      pctDescuentoNum =
+                        Math.round(
+                          (
+                            1 -
+                            (
+                              precioActual /
+                              precioAnterior
+                            )
+                          ) * 100
+                        );
+
+                    } else if (
+                      descuentoCol > 0
+                    ) {
+
+                      pctDescuentoNum =
+                        descuentoCol;
+
+                    }
+
+
+                    seleccionesUsuario[id] = {
+
+                      talla:
+                        tallas[0] || '',
+
+                      color:
+                        colores[0] || '',
+
+                      imagenActual:
+                        arrayImg[0]
+
+                    };
+
+
+                    return {
+
+                      id,
+
+                      titulo:
+                        titulo ||
+                        'Producto SUYAI',
+
+                      descripcion,
+
+                      precio:
+                        precioActual,
+
+                      precioAnterior,
+
+                      stock,
+
+                      rating,
+
+                      resenas,
+
+                      categoria,
+
+                      imagenes:
+                        arrayImg,
+
+                      imagen:
+                        arrayImg[0],
+
+                      tallas,
+
+                      colores,
+
+                      pctDescuento:
+                        pctDescuentoNum,
+
+                      precioText:
+                        `S/ ${precioActual.toFixed(2)}`,
+
+                      precioAnteriorText:
+                        precioAnterior > 0
+                          ? `S/ ${precioAnterior.toFixed(2)}`
+                          : '',
+
+                      esDestacado
+
+                    };
+
+                  })
+                  .filter(
+                    p =>
+                      p.titulo !==
+                      'Producto SUYAI'
+                  );
+
+
+              renderizarCategoriasSlider();
+
+              renderizarBannerTop();
+
+              ejecutarBusqueda();
+
+              procesarUrlHash();
+
+              iniciarNotificaciones();
+
+            }
+
           }
-        });
+        );
+
       } catch (err) {
-        console.error("Error cargando Google Sheets", err);
+
+        console.error(
+          'Error cargando Google Sheets:',
+          err
+        );
+
+        document.getElementById(
+          'categoryBlocksContainer'
+        ).innerHTML = `
+          <p style="
+            text-align:center;
+            color:#64748b;
+            padding:40px;
+          ">
+            No se pudo cargar el catálogo.
+            Inténtalo nuevamente.
+          </p>
+        `;
+
       }
+
     }
+
+
+    /* ==========================================
+       CATEGORÍAS
+       ========================================== */
 
     function renderizarCategoriasSlider() {
-      const container = document.getElementById('visualCategoriesGrid');
-      const listaCategorias = [...new Set(productosGlobales.map(p => p.categoria))];
+
+      const container =
+        document.getElementById(
+          'visualCategoriesGrid'
+        );
+
+
+      const listaCategorias =
+        [
+          ...new Set(
+            productosGlobales.map(
+              p => p.categoria
+            )
+          )
+        ];
+
 
       let html = `
-        <div class="category-card-visual ${categoriaActual === 'todas' ? 'active' : ''}" onclick="filtrarCategoria('todas', this)">
-          <img src="${IMAGENES_IA_CATEGORIAS['todas']}" alt="Todas">
+
+        <div
+          class="category-card-visual ${
+            categoriaActual === 'todas'
+              ? 'active'
+              : ''
+          }"
+          onclick="filtrarCategoria('todas', this)"
+        >
+
+          <img
+            src="${IMAGENES_CATEGORIAS.todas}"
+            alt="Todos los productos SUYAI"
+          >
+
           <div class="category-card-overlay">
-            <div class="category-card-title">TODOS<span>.</span></div>
+
+            <div class="category-card-title">
+              TODOS
+              <span>.</span>
+            </div>
+
           </div>
+
         </div>
+
       `;
 
-      listaCategorias.forEach(cat => {
-        const catKey = cat.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const imgUrl = IMAGENES_IA_CATEGORIAS[catKey] || FALLBACK_IMG;
+
+      listaCategorias.forEach(function(cat) {
+
+        const catKey =
+          cat
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(
+              /[\u0300-\u036f]/g,
+              ''
+            );
+
+
+        const imgUrl =
+          IMAGENES_CATEGORIAS[catKey] ||
+          FALLBACK_IMG;
+
 
         html += `
-          <div class="category-card-visual ${categoriaActual === cat ? 'active' : ''}" onclick="filtrarCategoria('${cat}', this)">
-            <img src="${imgUrl}" alt="${cat}">
+
+          <div
+            class="category-card-visual ${
+              categoriaActual === cat
+                ? 'active'
+                : ''
+            }"
+            onclick="filtrarCategoria(
+              ${JSON.stringify(cat)},
+              this
+            )"
+          >
+
+            <img
+              src="${imgUrl}"
+              alt="${cat}"
+            >
+
             <div class="category-card-overlay">
-              <div class="category-card-title">${cat}<span>.</span></div>
+
+              <div class="category-card-title">
+                ${cat}
+                <span>.</span>
+              </div>
+
             </div>
+
           </div>
+
         `;
+
       });
+
 
       container.innerHTML = html;
+
     }
+
+
+    /* ==========================================
+       BANNER DESTACADOS
+       ========================================== */
 
     function renderizarBannerTop() {
-      const container = document.getElementById('bannerTopProducts');
-      let destacados = productosGlobales.filter(p => p.esDestacado);
-      if (destacados.length < 2) destacados = productosGlobales.slice(0, 2);
-      else destacados = destacados.slice(0, 2);
 
-      container.innerHTML = destacados.map(p => `
-        <a href="#producto/${p.id}" class="mini-card-banner">
-          <div class="img-box"><img src="${p.imagen}" alt="${p.titulo}"></div>
-          <div class="title">${p.titulo}</div>
-          <div class="price">${p.precioText}</div>
-        </a>
-      `).join('');
+      const container =
+        document.getElementById(
+          'bannerTopProducts'
+        );
+
+
+      let destacados =
+        productosGlobales.filter(
+          p => p.esDestacado
+        );
+
+
+      if (
+        destacados.length < 2
+      ) {
+
+        destacados =
+          productosGlobales.slice(
+            0,
+            2
+          );
+
+      } else {
+
+        destacados =
+          destacados.slice(
+            0,
+            2
+          );
+
+      }
+
+
+      container.innerHTML =
+        destacados
+          .map(
+            p => `
+
+              <a
+                href="#producto/${encodeURIComponent(p.id)}"
+                class="mini-card-banner"
+              >
+
+                <div class="img-box">
+
+                  <img
+                    src="${p.imagen}"
+                    alt="${p.titulo}"
+                    loading="lazy"
+                  >
+
+                </div>
+
+                <div class="title">
+                  ${p.titulo}
+                </div>
+
+                <div class="price">
+                  ${p.precioText}
+                </div>
+
+              </a>
+
+            `
+          )
+          .join('');
+
     }
 
-    function filtrarCategoria(cat, elemento) {
+
+    /* ==========================================
+       FILTRAR CATEGORÍA
+       ========================================== */
+
+    function filtrarCategoria(
+      cat,
+      elemento
+    ) {
+
       categoriaActual = cat;
-      document.querySelectorAll('.category-card-visual').forEach(el => el.classList.remove('active'));
-      if (elemento) elemento.classList.add('active');
-      
-      document.getElementById('currentCategoryBreadcrumb').innerText = cat === 'todas' ? 'Catálogo General' : cat;
+
+
+      document
+        .querySelectorAll(
+          '.category-card-visual'
+        )
+        .forEach(
+          el =>
+            el.classList.remove(
+              'active'
+            )
+        );
+
+
+      if (elemento) {
+        elemento.classList.add(
+          'active'
+        );
+      }
+
+
+      document.getElementById(
+        'currentCategoryBreadcrumb'
+      ).innerText =
+        cat === 'todas'
+          ? 'Catálogo General'
+          : cat;
+
+
       ejecutarBusqueda();
+
     }
+
+
+    /* ==========================================
+       BUSCADOR
+       ========================================== */
 
     function ejecutarBusqueda() {
-      const texto = document.getElementById('searchInput').value.toLowerCase().trim();
-      const orden = document.getElementById('sortSelect').value;
 
-      let filtrados = productosGlobales.filter(p => {
-        const coincideCat = (categoriaActual === 'todas') || (p.categoria === categoriaActual);
-        const coincideTxt = p.titulo.toLowerCase().includes(texto) || p.descripcion.toLowerCase().includes(texto);
-        return coincideCat && coincideTxt;
-      });
+      const texto =
+        document.getElementById(
+          'searchInput'
+        ).value
+        .toLowerCase()
+        .trim();
 
-      if (orden === 'price-asc') filtrados.sort((a, b) => a.precio - b.precio);
-      else if (orden === 'price-desc') filtrados.sort((a, b) => b.precio - a.precio);
-      else if (orden === 'rating-desc') filtrados.sort((a, b) => b.rating - a.rating);
 
-      renderizarBloquesCategorias(filtrados);
+      const orden =
+        document.getElementById(
+          'sortSelect'
+        ).value;
+
+
+      let filtrados =
+        productosGlobales.filter(
+          function(p) {
+
+            const coincideCat =
+              categoriaActual === 'todas' ||
+              p.categoria ===
+                categoriaActual;
+
+
+            const coincideTxt =
+              p.titulo
+                .toLowerCase()
+                .includes(texto) ||
+
+              p.descripcion
+                .toLowerCase()
+                .includes(texto);
+
+
+            return (
+              coincideCat &&
+              coincideTxt
+            );
+
+          }
+        );
+
+
+      if (
+        orden === 'price-asc'
+      ) {
+
+        filtrados.sort(
+          (a,b) =>
+            a.precio - b.precio
+        );
+
+      } else if (
+        orden === 'price-desc'
+      ) {
+
+        filtrados.sort(
+          (a,b) =>
+            b.precio - a.precio
+        );
+
+      } else if (
+        orden === 'rating-desc'
+      ) {
+
+        filtrados.sort(
+          (a,b) =>
+            b.rating - a.rating
+        );
+
+      }
+
+
+      renderizarBloquesCategorias(
+        filtrados
+      );
+
     }
 
-    function renderizarBloquesCategorias(productosAFiltrar) {
-      const container = document.getElementById('categoryBlocksContainer');
-      const listaCategorias = [...new Set(productosAFiltrar.map(p => p.categoria))];
 
-      if (listaCategorias.length === 0) {
-        container.innerHTML = `<p style="text-align: center; color: var(--text-muted); padding: 40px;">No se encontraron productos en esta selección.</p>`;
+    /* ==========================================
+       MOSTRAR PRODUCTOS
+       ========================================== */
+
+    function renderizarBloquesCategorias(
+      productosAFiltrar
+    ) {
+
+      const container =
+        document.getElementById(
+          'categoryBlocksContainer'
+        );
+
+
+      const listaCategorias =
+        [
+          ...new Set(
+            productosAFiltrar.map(
+              p => p.categoria
+            )
+          )
+        ];
+
+
+      if (
+        listaCategorias.length === 0
+      ) {
+
+        container.innerHTML = `
+
+          <p style="
+            text-align:center;
+            color:var(--text-muted);
+            padding:40px;
+          ">
+            No se encontraron productos.
+          </p>
+
+        `;
+
         return;
+
       }
+
 
       let htmlBlocks = '';
 
-      listaCategorias.forEach(cat => {
-        const prods = productosAFiltrar.filter(p => p.categoria === cat);
-        if (prods.length === 0) return;
 
-        const sub = SUBTITULOS_CATEGORIA[cat.toLowerCase()] || 'Descubre lo mejor de esta categoría';
+      listaCategorias.forEach(
+        function(cat) {
 
-        htmlBlocks += `
-          <section class="category-block-section">
-            <div class="category-block-header">
-              <h2>${cat}<span>.</span></h2>
-              <p>${sub}</p>
-            </div>
-            
-            <div class="category-block-grid">
-              ${prods.map(p => {
-                const esOferta = p.pctDescuento > 0;
-                const badgeHtml = esOferta
-                  ? `<div class="promo-discount-badge">${p.pctDescuento}% DSCTO.<small>EN MILES DE PRODUCTOS</small></div>`
-                  : `<div class="promo-discount-badge" style="background:#0f172a; border:1px solid #00f0ff; color:#fff; box-shadow:0 4px 10px rgba(0,240,255,0.3);">OFERTA<small style="color:#00f0ff;">SUYAI STORE</small></div>`;
+          const prods =
+            productosAFiltrar.filter(
+              p =>
+                p.categoria === cat
+            );
 
-                return `
-                  <a href="#producto/${p.id}" class="category-promo-card">
-                    <img class="bg-img" src="${p.imagen}" alt="${p.titulo}">
-                    <div class="promo-top-label">${p.titulo.split(' ')[0]}</div>
-                    <div class="promo-bottom-bar">
-                      ${badgeHtml}
-                      <div class="promo-title-info">
-                        <h4>${p.titulo}</h4>
-                        <span>${p.precioText}</span>
-                      </div>
-                    </div>
-                  </a>
-                `;
-              }).join('')}
-            </div>
-          </section>
-        `;
-      });
 
-      container.innerHTML = htmlBlocks;
+          const catKey =
+            cat
+              .toLowerCase()
+              .normalize('NFD')
+              .replace(
+                /[\u0300-\u036f]/g,
+                ''
+              );
+
+
+          const sub =
+            SUBTITULOS_CATEGORIA[
+              catKey
+            ] ||
+            'Descubre lo mejor de esta categoría';
+
+
+          htmlBlocks += `
+
+            <section
+              class="category-block-section"
+            >
+
+              <div
+                class="category-block-header"
+              >
+
+                <h2>
+                  ${cat}
+                  <span>.</span>
+                </h2>
+
+                <p>
+                  ${sub}
+                </p>
+
+              </div>
+
+              <div
+                class="category-block-grid"
+              >
+
+                ${prods.map(
+                  function(p) {
+
+                    const esOferta =
+                      p.pctDescuento > 0;
+
+
+                    const badgeHtml =
+                      esOferta
+
+                        ? `
+
+                          <div
+                            class="promo-discount-badge"
+                          >
+                            ${p.pctDescuento}% DSCTO.
+
+                            <small>
+                              OFERTA SUYAI
+                            </small>
+                          </div>
+
+                        `
+
+                        : `
+
+                          <div
+                            class="promo-discount-badge"
+                            style="
+                              background:#0f172a;
+                              border:1px solid #00f0ff;
+                            "
+                          >
+                            OFERTA
+
+                            <small>
+                              SUYAI STORE
+                            </small>
+
+                          </div>
+
+                        `;
+
+
+                    return `
+
+                      <a
+                        href="#producto/${encodeURIComponent(p.id)}"
+                        class="category-promo-card"
+                      >
+
+                        <img
+                          class="bg-img"
+                          src="${p.imagen}"
+                          alt="${p.titulo} - SUYAI.store"
+                          loading="lazy"
+                        >
+
+                        <div
+                          class="promo-top-label"
+                        >
+                          ${p.titulo.split(' ')[0]}
+                        </div>
+
+                        <div
+                          class="promo-bottom-bar"
+                        >
+
+                          ${badgeHtml}
+
+                          <div
+                            class="promo-title-info"
+                          >
+
+                            <h4>
+                              ${p.titulo}
+                            </h4>
+
+                            <span>
+                              ${p.precioText}
+                            </span>
+
+                          </div>
+
+                        </div>
+
+                      </a>
+
+                    `;
+
+                  }
+                ).join('')}
+
+              </div>
+
+            </section>
+
+          `;
+
+        }
+      );
+
+
+      container.innerHTML =
+        htmlBlocks;
+
     }
 
-    // ==========================================
-    // SEO DINÁMICO & MANEJO DE URLs CON HASH
-    // ==========================================
-    function inyectarSchemaProducto(prod) {
-      const schemaScript = document.getElementById('schema-product-json');
-      
+
+    /* ==========================================
+       SCHEMA PRODUCTO
+       ========================================== */
+
+    function inyectarSchemaProducto(
+      prod
+    ) {
+
+      const schemaScript =
+        document.getElementById(
+          'schema-product-json'
+        );
+
+
       const schemaData = {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": prod.titulo,
-        "image": prod.imagenes,
-        "description": prod.descripcion,
-        "sku": prod.id,
-        "brand": {
-          "@type": "Brand",
-          "name": "SUYAI"
+
+        '@context':
+          'https://schema.org',
+
+        '@type':
+          'Product',
+
+        name:
+          prod.titulo,
+
+        image:
+          prod.imagenes,
+
+        description:
+          prod.descripcion,
+
+        sku:
+          prod.id,
+
+        brand: {
+
+          '@type':
+            'Brand',
+
+          name:
+            'SUYAI'
+
         },
-        "offers": {
-          "@type": "Offer",
-          "url": window.location.href,
-          "priceCurrency": "PEN",
-          "price": prod.precio.toFixed(2),
-          "availability": prod.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-          "itemCondition": "https://schema.org/NewCondition"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": prod.rating,
-          "reviewCount": prod.resenas
+
+        offers: {
+
+          '@type':
+            'Offer',
+
+          url:
+            'https://www.suyai.store/',
+
+          priceCurrency:
+            'PEN',
+
+          price:
+            prod.precio.toFixed(2),
+
+          availability:
+            prod.stock > 0
+              ? 'https://schema.org/InStock'
+              : 'https://schema.org/OutOfStock',
+
+          itemCondition:
+            'https://schema.org/NewCondition'
+
         }
+
       };
 
-      schemaScript.textContent = JSON.stringify(schemaData);
-      document.title = `${prod.titulo} | SUYAI.store`;
+
+      /*
+        Solo agregamos valoración si realmente
+        existe una cantidad válida de reseñas.
+      */
+      if (
+        prod.rating > 0 &&
+        prod.resenas > 0
+      ) {
+
+        schemaData.aggregateRating = {
+
+          '@type':
+            'AggregateRating',
+
+          ratingValue:
+            prod.rating,
+
+          reviewCount:
+            prod.resenas
+
+        };
+
+      }
+
+
+      schemaScript.textContent =
+        JSON.stringify(
+          schemaData
+        );
+
+
+      document.title =
+        `${prod.titulo} | SUYAI.store`;
+
     }
+
+
+    /* ==========================================
+       URL DEL PRODUCTO
+       ========================================== */
 
     function procesarUrlHash() {
-      const hash = window.location.hash;
-      if (hash.startsWith('#producto/')) {
-        const prodId = hash.replace('#producto/', '');
-        const prod = productosGlobales.find(p => p.id == prodId);
-        if (prod) abrirModalPreview(prod);
+
+      const hash =
+        window.location.hash;
+
+
+      if (
+        hash.startsWith(
+          '#producto/'
+        )
+      ) {
+
+        const prodId =
+          decodeURIComponent(
+            hash.replace(
+              '#producto/',
+              ''
+            )
+          );
+
+
+        const prod =
+          productosGlobales.find(
+            p =>
+              String(p.id) ===
+              String(prodId)
+          );
+
+
+        if (prod) {
+
+          abrirModalPreview(
+            prod
+          );
+
+        }
+
       } else {
+
         cerrarModalDirecto();
+
       }
+
     }
 
-    function abrirModalPreview(prod) {
-      productoModalActual = prod;
-      const sel = seleccionesUsuario[prod.id] || {};
 
-      document.getElementById('modalImg').src = sel.imagenActual || prod.imagen;
-      document.getElementById('modalCat').innerText = prod.categoria.toUpperCase();
-      document.getElementById('modalTitle').innerText = prod.titulo;
-      document.getElementById('modalDesc').innerText = prod.descripcion;
-      document.getElementById('modalStock').innerText = prod.stock > 0 ? `Disponible: ${prod.stock} unidades` : 'Agotado';
+    /* ==========================================
+       ABRIR PRODUCTO
+       ========================================== */
 
-      // Estrellas
+    function abrirModalPreview(
+      prod
+    ) {
+
+      productoModalActual =
+        prod;
+
+
+      const sel =
+        seleccionesUsuario[
+          prod.id
+        ] || {};
+
+
+      document.getElementById(
+        'modalImg'
+      ).src =
+        sel.imagenActual ||
+        prod.imagen;
+
+
+      document.getElementById(
+        'modalCat'
+      ).innerText =
+        prod.categoria
+          .toUpperCase();
+
+
+      document.getElementById(
+        'modalTitle'
+      ).innerText =
+        prod.titulo;
+
+
+      document.getElementById(
+        'modalDesc'
+      ).innerText =
+        prod.descripcion;
+
+
+      document.getElementById(
+        'modalStock'
+      ).innerText =
+        prod.stock > 0
+          ? `Disponible: ${prod.stock} unidades`
+          : 'Agotado';
+
+
+      /* ESTRELLAS */
+
       let estrellasHtml = '';
-      for (let i = 1; i <= 5; i++) {
-        estrellasHtml += `<i class="fa-solid fa-star" style="color:${i <= Math.round(prod.rating) ? 'var(--star)' : '#cbd5e1'}"></i>`;
-      }
-      document.getElementById('modalRating').innerHTML = `${estrellasHtml} <span style="margin-left: 4px; font-weight:700; color:var(--text);">${prod.rating}</span> (${prod.resenas} reseñas)`;
 
-      // Precios
-      let priceHtml = `<span class="precio-actual">${prod.precioText}</span>`;
-      if (prod.precioAnterior > prod.precio) {
-        priceHtml += `<span class="precio-tachado">${prod.precioAnteriorText}</span>`;
-      }
-      if (prod.pctDescuento > 0) {
-        priceHtml += `<span class="badge-descuento">-${prod.pctDescuento}%</span>`;
-      }
-      document.getElementById('modalPriceContainer').innerHTML = priceHtml;
+      for (
+        let i = 1;
+        i <= 5;
+        i++
+      ) {
 
-      // Galería Miniaturas
-      const galleryBox = document.getElementById('modalGallery');
-      if (prod.imagenes.length > 1) {
-        galleryBox.innerHTML = prod.imagenes.map((img) => `
-          <img class="thumb-img ${sel.imagenActual === img ? 'active' : ''}" src="${img}" onclick="cambiarImagenModal('${prod.id}', '${img}', this)">
-        `).join('');
+        estrellasHtml += `
+
+          <i
+            class="fa-solid fa-star"
+            style="
+              color:${
+                i <= Math.round(prod.rating)
+                  ? 'var(--star)'
+                  : '#cbd5e1'
+              };
+            "
+          ></i>
+
+        `;
+
+      }
+
+
+      document.getElementById(
+        'modalRating'
+      ).innerHTML = `
+
+        ${estrellasHtml}
+
+        <span
+          style="
+            margin-left:4px;
+            font-weight:700;
+            color:var(--text);
+          "
+        >
+          ${prod.rating}
+        </span>
+
+        (${prod.resenas} reseñas)
+
+      `;
+
+
+      /* PRECIOS */
+
+      let priceHtml = `
+
+        <span class="precio-actual">
+          ${prod.precioText}
+        </span>
+
+      `;
+
+
+      if (
+        prod.precioAnterior >
+        prod.precio
+      ) {
+
+        priceHtml += `
+
+          <span
+            class="precio-tachado"
+          >
+            ${prod.precioAnteriorText}
+          </span>
+
+        `;
+
+      }
+
+
+      if (
+        prod.pctDescuento > 0
+      ) {
+
+        priceHtml += `
+
+          <span
+            class="badge-descuento"
+          >
+            -${prod.pctDescuento}%
+          </span>
+
+        `;
+
+      }
+
+
+      document.getElementById(
+        'modalPriceContainer'
+      ).innerHTML =
+        priceHtml;
+
+
+      /* GALERÍA */
+
+      const galleryBox =
+        document.getElementById(
+          'modalGallery'
+        );
+
+
+      if (
+        prod.imagenes.length > 1
+      ) {
+
+        galleryBox.innerHTML =
+          prod.imagenes
+            .map(
+              function(img) {
+
+                return `
+
+                  <img
+                    class="thumb-img ${
+                      sel.imagenActual === img
+                        ? 'active'
+                        : ''
+                    }"
+                    src="${img}"
+                    alt="${prod.titulo}"
+                    onclick='cambiarImagenModal(
+                      ${JSON.stringify(prod.id)},
+                      ${JSON.stringify(img)},
+                      this
+                    )'
+                  >
+
+                `;
+
+              }
+            )
+            .join('');
+
       } else {
-        galleryBox.innerHTML = '';
+
+        galleryBox.innerHTML =
+          '';
+
       }
 
-      // Opciones Talla y Color
-      const optionsBox = document.getElementById('modalOptions');
+
+      /* OPCIONES */
+
+      const optionsBox =
+        document.getElementById(
+          'modalOptions'
+        );
+
+
       let optHtml = '';
-      if (prod.tallas.length > 0) {
-        optHtml += `
-          <div class="option-group">
-            <span class="option-label">Talla:</span>
-            <div class="option-badges">
-              ${prod.tallas.map(t => `<span class="badge-opt ${sel.talla === t ? 'active' : ''}" onclick="seleccionarOpcion('${prod.id}', 'talla', '${t}', this)">${t}</span>`).join('')}
-            </div>
-          </div>
-        `;
-      }
-      if (prod.colores.length > 0) {
-        optHtml += `
-          <div class="option-group">
-            <span class="option-label">Color:</span>
-            <div class="option-badges">
-              ${prod.colores.map(c => `<span class="badge-opt ${sel.color === c ? 'active' : ''}" onclick="seleccionarOpcion('${prod.id}', 'color', '${c}', this)">${c}</span>`).join('')}
-            </div>
-          </div>
-        `;
-      }
-      optionsBox.innerHTML = optHtml;
 
-      // Botón Carrito
-      const addBtn = document.getElementById('modalAddBtn');
-      addBtn.onclick = () => {
-        agregarAlCarrito(prod.id);
+
+      if (
+        prod.tallas.length > 0
+      ) {
+
+        optHtml += `
+
+          <div
+            class="option-group"
+          >
+
+            <span
+              class="option-label"
+            >
+              Talla:
+            </span>
+
+            <div
+              class="option-badges"
+            >
+
+              ${prod.tallas.map(
+                function(t) {
+
+                  return `
+
+                    <span
+                      class="badge-opt ${
+                        sel.talla === t
+                          ? 'active'
+                          : ''
+                      }"
+                      onclick='seleccionarOpcion(
+                        ${JSON.stringify(prod.id)},
+                        "talla",
+                        ${JSON.stringify(t)},
+                        this
+                      )'
+                    >
+                      ${t}
+                    </span>
+
+                  `;
+
+                }
+              ).join('')}
+
+            </div>
+
+          </div>
+
+        `;
+
+      }
+
+
+      if (
+        prod.colores.length > 0
+      ) {
+
+        optHtml += `
+
+          <div
+            class="option-group"
+          >
+
+            <span
+              class="option-label"
+            >
+              Color:
+            </span>
+
+            <div
+              class="option-badges"
+            >
+
+              ${prod.colores.map(
+                function(c) {
+
+                  return `
+
+                    <span
+                      class="badge-opt ${
+                        sel.color === c
+                          ? 'active'
+                          : ''
+                      }"
+                      onclick='seleccionarOpcion(
+                        ${JSON.stringify(prod.id)},
+                        "color",
+                        ${JSON.stringify(c)},
+                        this
+                      )'
+                    >
+                      ${c}
+                    </span>
+
+                  `;
+
+                }
+              ).join('')}
+
+            </div>
+
+          </div>
+
+        `;
+
+      }
+
+
+      optionsBox.innerHTML =
+        optHtml;
+
+
+      /* BOTÓN */
+
+      const addBtn =
+        document.getElementById(
+          'modalAddBtn'
+        );
+
+
+      addBtn.onclick =
+        function() {
+
+          agregarAlCarrito(
+            prod.id
+          );
+
+          cerrarModalDirecto();
+
+        };
+
+
+      /* SCHEMA */
+
+      inyectarSchemaProducto(
+        prod
+      );
+
+
+      document.getElementById(
+        'previewModal'
+      ).classList.add(
+        'active'
+      );
+
+    }
+
+
+    /* ==========================================
+       CAMBIAR IMAGEN
+       ========================================== */
+
+    function cambiarImagenModal(
+      id,
+      imgUrl,
+      el
+    ) {
+
+      if (
+        !seleccionesUsuario[id]
+      ) {
+        seleccionesUsuario[id] = {};
+      }
+
+
+      seleccionesUsuario[id]
+        .imagenActual =
+        imgUrl;
+
+
+      document.getElementById(
+        'modalImg'
+      ).src =
+        imgUrl;
+
+
+      document
+        .querySelectorAll(
+          '#modalGallery .thumb-img'
+        )
+        .forEach(
+          t =>
+            t.classList.remove(
+              'active'
+            )
+        );
+
+
+      el.classList.add(
+        'active'
+      );
+
+    }
+
+
+    /* ==========================================
+       SELECCIONAR TALLA / COLOR
+       ========================================== */
+
+    function seleccionarOpcion(
+      id,
+      tipo,
+      valor,
+      el
+    ) {
+
+      if (
+        !seleccionesUsuario[id]
+      ) {
+        seleccionesUsuario[id] = {};
+      }
+
+
+      seleccionesUsuario[id][tipo] =
+        valor;
+
+
+      const parent =
+        el.parentElement;
+
+
+      parent
+        .querySelectorAll(
+          '.badge-opt'
+        )
+        .forEach(
+          b =>
+            b.classList.remove(
+              'active'
+            )
+        );
+
+
+      el.classList.add(
+        'active'
+      );
+
+    }
+
+
+    /* ==========================================
+       CERRAR MODAL
+       ========================================== */
+
+    function cerrarModal(
+      event
+    ) {
+
+      if (
+        event.target.id ===
+        'previewModal'
+      ) {
+
         cerrarModalDirecto();
-      };
 
-      inyectarSchemaProducto(prod);
-      document.getElementById('previewModal').classList.add('active');
+      }
+
     }
 
-    function cambiarImagenModal(id, imgUrl, el) {
-      seleccionesUsuario[id].imagenActual = imgUrl;
-      document.getElementById('modalImg').src = imgUrl;
-      document.querySelectorAll('#modalGallery .thumb-img').forEach(t => t.classList.remove('active'));
-      el.classList.add('active');
-    }
-
-    function seleccionarOpcion(id, tipo, valor, el) {
-      seleccionesUsuario[id][tipo] = valor;
-      const parent = el.parentElement;
-      parent.querySelectorAll('.badge-opt').forEach(b => b.classList.remove('active'));
-      el.classList.add('active');
-    }
-
-    function cerrarModal(event) {
-      if (event.target.id === 'previewModal') cerrarModalDirecto();
-    }
 
     function cerrarModalDirecto() {
-      document.getElementById('previewModal').classList.remove('active');
-      if (window.location.hash.includes('#producto/')) {
-        history.pushState("", document.title, window.location.pathname + window.location.search);
+
+      document.getElementById(
+        'previewModal'
+      ).classList.remove(
+        'active'
+      );
+
+
+      if (
+        window.location.hash.includes(
+          '#producto/'
+        )
+      ) {
+
+        history.pushState(
+          '',
+          document.title,
+          window.location.pathname +
+          window.location.search
+        );
+
       }
-      document.title = "SUYAI.store | Tienda Online Oficial en Perú";
+
+
+      document.title =
+        'SUYAI.store | Tienda Online en Perú';
+
     }
 
-    // CARRITO Y LOGICA DE COMPRA
-    function agregarAlCarrito(id) {
-      const prod = productosGlobales.find(p => p.id == id);
-      if (!prod) return;
 
-      const sel = seleccionesUsuario[id] || {};
-      const itemExistente = carrito.find(item => item.id == id && item.talla === sel.talla && item.color === sel.color);
+    /* ==========================================
+       AGREGAR AL CARRITO
+       ========================================== */
+
+    function agregarAlCarrito(
+      id
+    ) {
+
+      const prod =
+        productosGlobales.find(
+          p =>
+            String(p.id) ===
+            String(id)
+        );
+
+
+      if (!prod) {
+        return;
+      }
+
+
+      const sel =
+        seleccionesUsuario[id] ||
+        {};
+
+
+      const itemExistente =
+        carrito.find(
+          item =>
+            item.id === id &&
+            item.talla ===
+              (sel.talla || '') &&
+            item.color ===
+              (sel.color || '')
+        );
+
 
       if (itemExistente) {
+
         itemExistente.cantidad++;
+
       } else {
+
         carrito.push({
-          id: prod.id,
-          titulo: prod.titulo,
-          precio: prod.precio,
-          imagen: sel.imagenActual || prod.imagen,
-          talla: sel.talla || '',
-          color: sel.color || '',
-          cantidad: 1
+
+          id:
+            prod.id,
+
+          titulo:
+            prod.titulo,
+
+          precio:
+            prod.precio,
+
+          imagen:
+            sel.imagenActual ||
+            prod.imagen,
+
+          talla:
+            sel.talla || '',
+
+          color:
+            sel.color || '',
+
+          cantidad:
+            1
+
         });
+
       }
 
+
       actualizarCarritoUI();
+
       toggleCarrito(true);
+
     }
 
-    function cambiarCantidad(index, delta) {
-      if (carrito[index]) {
-        carrito[index].cantidad += delta;
-        if (carrito[index].cantidad <= 0) {
-          carrito.splice(index, 1);
+
+    /* ==========================================
+       CANTIDAD
+       ========================================== */
+
+    function cambiarCantidad(
+      index,
+      delta
+    ) {
+
+      if (
+        carrito[index]
+      ) {
+
+        carrito[index].cantidad +=
+          delta;
+
+
+        if (
+          carrito[index].cantidad <= 0
+        ) {
+
+          carrito.splice(
+            index,
+            1
+          );
+
         }
+
       }
+
+
       actualizarCarritoUI();
+
     }
 
-    function eliminarDelCarrito(index) {
-      carrito.splice(index, 1);
+
+    /* ==========================================
+       ELIMINAR
+       ========================================== */
+
+    function eliminarDelCarrito(
+      index
+    ) {
+
+      carrito.splice(
+        index,
+        1
+      );
+
+
       actualizarCarritoUI();
+
     }
+
+
+    /* ==========================================
+       ACTUALIZAR CARRITO
+       ========================================== */
 
     function actualizarCarritoUI() {
-      const container = document.getElementById('cartItemsContainer');
-      const totalCount = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-      const totalMonto = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
 
-      document.getElementById('cartCount').innerText = totalCount;
-      document.getElementById('cartTotalText').innerText = `S/ ${totalMonto.toFixed(2)}`;
+      const container =
+        document.getElementById(
+          'cartItemsContainer'
+        );
 
-      if (carrito.length === 0) {
-        container.innerHTML = `<p style="text-align: center; color: var(--text-muted); margin-top: 20px;">Tu carrito está vacío.</p>`;
+
+      const totalCount =
+        carrito.reduce(
+          (
+            acc,
+            item
+          ) =>
+            acc + item.cantidad,
+          0
+        );
+
+
+      const totalMonto =
+        carrito.reduce(
+          (
+            acc,
+            item
+          ) =>
+            acc +
+            (
+              item.precio *
+              item.cantidad
+            ),
+          0
+        );
+
+
+      document.getElementById(
+        'cartCount'
+      ).innerText =
+        totalCount;
+
+
+      document.getElementById(
+        'cartTotalText'
+      ).innerText =
+        `S/ ${totalMonto.toFixed(2)}`;
+
+
+      if (
+        carrito.length === 0
+      ) {
+
+        container.innerHTML = `
+
+          <p style="
+            text-align:center;
+            color:var(--text-muted);
+            margin-top:20px;
+          ">
+            Tu carrito está vacío.
+          </p>
+
+        `;
+
         return;
+
       }
 
-      container.innerHTML = carrito.map((item, idx) => `
-        <div class="cart-item">
-          <img src="${item.imagen}" alt="${item.titulo}">
-          <div class="cart-item-details">
-            <h4>${item.titulo}</h4>
-            <p>S/ ${item.precio.toFixed(2)} ${item.talla ? '| Talla: '+item.talla : ''} ${item.color ? '| Color: '+item.color : ''}</p>
-            <div class="qty-controls">
-              <button class="qty-btn" onclick="cambiarCantidad(${idx}, -1)">-</button>
-              <span style="font-size:0.85rem; font-weight:700;">${item.cantidad}</span>
-              <button class="qty-btn" onclick="cambiarCantidad(${idx}, 1)">+</button>
-            </div>
-          </div>
-          <button class="btn-remove-item" onclick="eliminarDelCarrito(${idx})"><i class="fa-solid fa-trash-can"></i></button>
-        </div>
-      `).join('');
+
+      container.innerHTML =
+        carrito
+          .map(
+            function(item, idx) {
+
+              return `
+
+                <div
+                  class="cart-item"
+                >
+
+                  <img
+                    src="${item.imagen}"
+                    alt="${item.titulo}"
+                  >
+
+                  <div
+                    class="cart-item-details"
+                  >
+
+                    <h4>
+                      ${item.titulo}
+                    </h4>
+
+                    <p>
+                      S/ ${item.precio.toFixed(2)}
+
+                      ${
+                        item.talla
+                          ? ` | Talla: ${item.talla}`
+                          : ''
+                      }
+
+                      ${
+                        item.color
+                          ? ` | Color: ${item.color}`
+                          : ''
+                      }
+
+                    </p>
+
+                    <div
+                      class="qty-controls"
+                    >
+
+                      <button
+                        class="qty-btn"
+                        onclick="cambiarCantidad(
+                          ${idx},
+                          -1
+                        )"
+                      >
+                        -
+                      </button>
+
+                      <span
+                        style="
+                          font-size:0.85rem;
+                          font-weight:700;
+                        "
+                      >
+                        ${item.cantidad}
+                      </span>
+
+                      <button
+                        class="qty-btn"
+                        onclick="cambiarCantidad(
+                          ${idx},
+                          1
+                        )"
+                      >
+                        +
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                  <button
+                    class="btn-remove-item"
+                    onclick="eliminarDelCarrito(
+                      ${idx}
+                    )"
+                  >
+
+                    <i
+                      class="fa-solid fa-trash-can"
+                    ></i>
+
+                  </button>
+
+                </div>
+
+              `;
+
+            }
+          )
+          .join('');
+
     }
 
-    function toggleCarrito(forzarAbrir = false) {
-      const drawer = document.getElementById('cartDrawer');
-      if (forzarAbrir) drawer.classList.add('open');
-      else drawer.classList.toggle('open');
+
+    /* ==========================================
+       ABRIR / CERRAR CARRITO
+       ========================================== */
+
+    function toggleCarrito(
+      forzarAbrir = false
+    ) {
+
+      const drawer =
+        document.getElementById(
+          'cartDrawer'
+        );
+
+
+      if (forzarAbrir) {
+
+        drawer.classList.add(
+          'open'
+        );
+
+      } else {
+
+        drawer.classList.toggle(
+          'open'
+        );
+
+      }
+
     }
+
+
+    /* ==========================================
+       WHATSAPP
+       ========================================== */
 
     function enviarPedidoWhatsApp() {
-      if (carrito.length === 0) {
-        alert("Tu carrito está vacío.");
+
+      if (
+        carrito.length === 0
+      ) {
+
+        alert(
+          'Tu carrito está vacío.'
+        );
+
+        return;
+
+      }
+
+
+      let mensaje =
+        '¡Hola SUYAI Store! 🛒 Deseo realizar la compra de los siguientes productos:\n\n';
+
+
+      let total = 0;
+
+
+      carrito.forEach(
+        function(item, i) {
+
+          const subtotal =
+            item.precio *
+            item.cantidad;
+
+
+          total += subtotal;
+
+
+          mensaje +=
+            `${i + 1}. *${item.titulo}*\n`;
+
+
+          if (item.talla) {
+
+            mensaje +=
+              `   - Talla: ${item.talla}\n`;
+
+          }
+
+
+          if (item.color) {
+
+            mensaje +=
+              `   - Color: ${item.color}\n`;
+
+          }
+
+
+          mensaje +=
+            `   - Cantidad: ${item.cantidad}\n`;
+
+
+          mensaje +=
+            `   - Precio: S/ ${subtotal.toFixed(2)}\n\n`;
+
+        }
+      );
+
+
+      mensaje +=
+        `*TOTAL A PAGAR: S/ ${total.toFixed(2)}*\n\n`;
+
+
+      mensaje +=
+        'Por favor, indíquenme los medios de pago y costo de envío. ¡Gracias!';
+
+
+      const url =
+        `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(
+          mensaje
+        )}`;
+
+
+      window.open(
+        url,
+        '_blank'
+      );
+
+    }
+
+
+    /* ==========================================
+       NOTIFICACIONES
+       ========================================== */
+
+    function iniciarNotificaciones() {
+
+      if (
+        productosGlobales.length === 0
+      ) {
         return;
       }
 
-      let mensaje = "¡Hola SUYAI Store! 🛒 Deseo realizar la compra de los siguientes productos:\n\n";
-      let total = 0;
 
-      carrito.forEach((item, i) => {
-        const subtotal = item.precio * item.cantidad;
-        total += subtotal;
-        mensaje += `${i + 1}. *${item.titulo}*\n`;
-        if (item.talla) mensaje += `   - Talla: ${item.talla}\n`;
-        if (item.color) mensaje += `   - Color: ${item.color}\n`;
-        mensaje += `   - Cantidad: ${item.cantidad}\n`;
-        mensaje += `   - Precio: S/ ${subtotal.toFixed(2)}\n\n`;
-      });
+      const nombres = [
 
-      mensaje += `*TOTAL A PAGAR: S/ ${total.toFixed(2)}*\n\n`;
-      mensaje += "Por favor, indíquenme los medios de pago y costo de envío. ¡Gracias!";
+        'Cliente de Lima',
 
-      const url = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
+        'Cliente de Arequipa',
+
+        'Cliente de Piura',
+
+        'Cliente de Trujillo',
+
+        'Cliente de Cusco'
+
+      ];
+
+
+      const notifEl =
+        document.getElementById(
+          'liveNotif'
+        );
+
+
+      setInterval(
+        function() {
+
+          const prod =
+            productosGlobales[
+              Math.floor(
+                Math.random() *
+                productosGlobales.length
+              )
+            ];
+
+
+          const user =
+            nombres[
+              Math.floor(
+                Math.random() *
+                nombres.length
+              )
+            ];
+
+
+          document.getElementById(
+            'notifUser'
+          ).innerText =
+            user;
+
+
+          document.getElementById(
+            'notifProd'
+          ).innerText =
+            prod.titulo;
+
+
+          document.getElementById(
+            'notifImg'
+          ).src =
+            prod.imagen;
+
+
+          notifEl.classList.add(
+            'show'
+          );
+
+
+          setTimeout(
+            function() {
+
+              notifEl.classList.remove(
+                'show'
+              );
+
+            },
+            4000
+          );
+
+        },
+        12000
+      );
+
     }
 
-    // NOTIFICACIONES FLOTANTES LIVES
-    function iniciarNotificaciones() {
-      if (productosGlobales.length === 0) return;
-
-      const nombres = ['María R. (Lima)', 'Carlos G. (Arequipa)', 'Jorge L. (Piura)', 'Ana M. (Trujillo)', 'Luis P. (Cusco)'];
-      const notifEl = document.getElementById('liveNotif');
-
-      setInterval(() => {
-        const prod = productosGlobales[Math.floor(Math.random() * productosGlobales.length)];
-        const user = nombres[Math.floor(Math.random() * nombres.length)];
-
-        document.getElementById('notifUser').innerText = user;
-        document.getElementById('notifProd').innerText = prod.titulo;
-        document.getElementById('notifImg').src = prod.imagen;
-
-        notifEl.classList.add('show');
-        setTimeout(() => notifEl.classList.remove('show'), 4000);
-      }, 12000);
-    }
   </script>
+
 </body>
 </html>
